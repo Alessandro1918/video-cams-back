@@ -1,18 +1,19 @@
-const express = require("express")
+// const express = require("express")
 require('dotenv').config()
 
 const PORT = process.env.PORT || 4000
 const URL_FRONT = process.env.URL_FRONT || `http://localhost:3000`
 
-const app = express()
+// const app = express()
 // app.use(cors({
 //   origin: URL_FRONT
 // }))
-app.get("/", (req, res) => {
-  res.send(`<h1>Hello, World!</h1>`)
-})
+// app.get("/", (req, res) => {
+//   res.send(`<h1>Hello, World!</h1>`)
+// })
 
-const server = require("http").createServer(app)
+// const server = require("http").createServer(app)
+const server = require("http").createServer()
 
 const io = require("socket.io")(server, {
   cors: {
